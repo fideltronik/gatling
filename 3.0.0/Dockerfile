@@ -13,6 +13,10 @@ WORKDIR /opt
 # gating version
 ENV GATLING_VERSION 3.0.0
 
+# install openssl
+RUN apk add --update openssl && \
+    rm -rf /var/cache/apk/*
+
 # create directory for gatling install
 RUN mkdir -p gatling
 
