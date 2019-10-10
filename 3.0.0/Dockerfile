@@ -16,7 +16,7 @@ ENV GATLING_VERSION 3.0.0
 # install openssl
 # RUN apt-get install openssl
 RUN apt-get update \
-    && apt-get install -y wget openssl \
+    && apt-get install -y wget openssl unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # create directory for gatling install
@@ -40,4 +40,3 @@ VOLUME ["/opt/gatling/conf", "/opt/gatling/results", "/opt/gatling/user-files"]
 # set environment variables
 ENV PATH /opt/gatling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV GATLING_HOME /opt/gatling
-
